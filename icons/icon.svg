@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Logo mark: gold square, 3 gold-ink bars at 60/80/100% (Designer Q1) -->
+  <rect width="512" height="512" fill="#F5B83D"/>
+  <rect x="128" y="174" width="154" height="36" rx="18" fill="#1A1405"/>
+  <rect x="128" y="238" width="205" height="36" rx="18" fill="#1A1405"/>
+  <rect x="128" y="302" width="256" height="36" rx="18" fill="#1A1405"/>
+</svg>
