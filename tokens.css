@@ -1,0 +1,155 @@
+/* AID Quizz v1.0 — tokens.css
+   Source: DESIGN HANDOFF §1 TOKENS + §5 MOTION. Dark-only.
+   Rule: every visual value in the app comes from a variable here. */
+
+:root {
+  color-scheme: dark;
+
+  /* ---------- Colour ---------- */
+  --bg: #0E1116;            /* page ground */
+  --surface-2: #161A21;     /* cards, sheets, answer tiles */
+  --surface-3: #1F242D;     /* inputs, chips, tracks, skeletons, disabled btn */
+  --line: #2A303B;          /* tile/input borders, dividers */
+  --ink: #EEF1F5;           /* primary text */
+  --ink-muted: #9AA3B2;     /* secondary text, captions */
+  --ink-subtle: #7C8595;    /* icons, disabled text (UI only) */
+
+  --gold: #F5B83D;          /* primary: buttons, selected, progress fill, active tab */
+  --gold-ink: #1A1405;      /* text/icons on gold */
+  --gold-tint: #2A2210;     /* selected tile bg, badge bg */
+
+  --ice: #7DD3FC;           /* Boss only: icon, labels, step bar */
+  --ice-tint: #0F2433;      /* Boss brief card bg */
+
+  --success: #34D399;
+  --success-tint: #0F2A20;
+  --error: #F87171;
+  --error-tint: #2E1515;
+  --warn: #FB923C;          /* daily-cap icon */
+  --hinted-opacity: 0.25;   /* v1.2: options removed by Hint */
+  --focus: #60A5FA;         /* 2px outline, 2px offset */
+  --scrim: rgba(14, 17, 22, .72);
+
+  /* ---------- Type families ---------- */
+  --font-display: "Space Grotesk", system-ui, sans-serif;  /* display, titles, numbers */
+  --font-body: "Manrope", system-ui, sans-serif;           /* all else */
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;  /* prompts, codes, Qn/100 */
+
+  /* ---------- Type scale (size / line-height / weight) ---------- */
+  --display-size: 32px;        --display-lh: 38px;        --display-wt: 700;
+  --display-welcome-size: 40px; --display-welcome-lh: 44px;
+  --display-q1000-size: 56px;  --display-q1000-lh: 56px;
+  --title-size: 24px;          --title-lh: 30px;          --title-wt: 700;
+  --question-size: 20px;       --question-lh: 28px;       --question-wt: 700;
+  --heading-size: 18px;        --heading-lh: 24px;        --heading-wt: 700;
+  --body-size: 16px;           --body-lh: 24px;           --body-wt: 500;
+  --small-size: 14px;          --small-lh: 20px;          --small-wt: 500;
+  --caption-size: 12px;        --caption-lh: 16px;        --caption-wt: 600;
+  --label-size: 13px;          --label-lh: 18px;          --label-wt: 700;
+  --brand-size: 20px;          /* Level map header "AID Quizz" 20px */
+
+  /* Weights available (loaded in index.html) */
+  --wt-500: 500; --wt-600: 600; --wt-700: 700; --wt-800: 800;
+  --mono-wt-400: 400; --mono-wt-500: 500;
+
+  /* ---------- Spacing ---------- */
+  --sp-4: 4px;
+  --sp-8: 8px;
+  --sp-12: 12px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --screen-pad: var(--sp-16);
+  --option-gap: var(--sp-8);
+  --group-gap: var(--sp-16);      /* 16–24 range */
+  --group-gap-lg: var(--sp-24);
+
+  /* ---------- Radius ---------- */
+  --r-6: 6px;       /* chips, tracks, keys */
+  --r-10: 10px;     /* buttons, inputs, tiles */
+  --r-16: 16px;     /* cards, sheet top */
+  --r-pill: 999px;  /* pills, dots, avatar */
+
+  /* ---------- Shadow ---------- */
+  --shadow-sheet: 0 -12px 32px rgba(0, 0, 0, .45);
+  --shadow-dialog: 0 12px 32px rgba(0, 0, 0, .5);   /* dialog + toast */
+  --shadow-footer: 0 -1px 0 var(--line);
+  --shadow-header: 0 1px 0 var(--line);   /* Level map header bottom line */
+
+  /* ---------- Layout ---------- */
+  --column-min: 390px;
+  --column-max: 430px;
+  --column-breakpoint: 480px;     /* >480px: centred column on --bg */
+
+  /* ---------- Component sizes (from §2 / §3) ---------- */
+  --btn-primary-h: 52px;
+  --btn-secondary-h: 48px;
+  --btn-ghost-h: 44px;
+  --icon-btn: 44px;
+  --input-h: 48px;
+  --pill-h: 44px;
+  --tabs-h: 40px;
+  --topbar-h: 44px;
+  --track-h: 6px;
+  --key-size: 28px;               /* answer tile A–D key */
+  --sheet-handle-w: 40px;  --sheet-handle-h: 4px;
+  --skeleton-line-h: 24px; --skeleton-tile-h: 52px;
+  --dot-level: 44px;              /* level number dot */
+  --dot-trophy: 72px;
+  --alert-badge: 64px;            /* S2 error-tint alert */
+  --ring-sm: 32px; --ring-md: 44px; --ring-lg: 64px;
+  --ring-spinner: 96px;           /* Boss 7c */
+  --medallion: 148px;
+  --medallion-border: 4px;
+  --logo-mark: 40px;
+  --logo-bar-h: 4px; --logo-bar-gap: 5px;
+  --textarea-boss-h: 220px;
+  --textarea-desc-h: 72px;
+  --spinner-btn: 20px;            /* Designer Q3: gold-ink 20px */
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-3: 3px;
+
+  /* Icons: Lucide, 1.75 stroke */
+  --icon-stroke: 1.75;
+  --icon-16: 16px; --icon-18: 18px; --icon-20: 20px; --icon-24: 24px;   /* 18: v1.1 banner + radio mark */
+
+  /* Focus ring */
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  /* ---------- Motion (§5) ---------- */
+  --ease-sheet-open: cubic-bezier(.2, .8, .2, 1);
+  --ease-out: ease-out;
+  --ease-in: ease-in;
+  --ease-in-out: ease-in-out;
+  --ease-medallion: cubic-bezier(.34, 1.56, .64, 1);
+
+  --dur-sheet-open: 240ms;
+  --dur-sheet-close: 180ms;
+  --dur-tile-select: 120ms;
+  --dur-dialog: 180ms;
+  --dur-toast: 200ms;
+  --dur-toast-hide: 3s;
+  --dur-skeleton: 1200ms;
+  --dur-medallion: 400ms;
+  --dur-progress: 300ms;
+
+  /* Not in handoff — provisional, see Designer Q6 */
+  --dur-spin: 800ms;              /* button + Boss ring spinner rotation */
+  --opacity-dimmed: .4;           /* pill dimmed at max 3 */
+  --opacity-pulse-low: .5;        /* skeleton pulse trough */
+
+  --dialog-scale-from: .96;
+  --medallion-scale-from: .6;
+  --pressed-darken: brightness(.92);   /* "darken 8%" */
+}
+
+/* Reduced motion: no transform, fade only (§5) */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dialog-scale-from: 1;
+    --medallion-scale-from: 1;
+  }
+}
